@@ -6,7 +6,6 @@
     <title>MiaWare — чит для Minecraft</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* ----- ОБЩИЕ СТИЛИ ----- */
         * {
             margin: 0;
             padding: 0;
@@ -33,7 +32,6 @@
             border: 1px solid #2a3138;
         }
 
-        /* ----- НАВИГАЦИЯ ----- */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -63,10 +61,9 @@
             font-weight: 900;
             font-size: 28px;
             color: #fff;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            font-family: 'Arial Black', sans-serif;
             box-shadow: 0 4px 16px rgba(29, 185, 84, 0.3);
             transition: 0.3s;
-            font-family: 'Arial Black', sans-serif;
         }
 
         .logo-icon:hover {
@@ -77,7 +74,6 @@
         .logo-text {
             font-size: 26px;
             font-weight: 800;
-            letter-spacing: -0.5px;
             color: #eef2f5;
         }
 
@@ -155,25 +151,6 @@
             box-shadow: 0 4px 16px rgba(29, 185, 84, 0.3);
         }
 
-        .btn-green {
-            background: #1db954;
-            border: none;
-            color: #fff;
-            padding: 10px 28px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 15px;
-            cursor: pointer;
-            transition: 0.2s;
-            width: 100%;
-        }
-
-        .btn-green:hover {
-            background: #17a34a;
-            box-shadow: 0 4px 20px rgba(29, 185, 84, 0.3);
-        }
-
-        /* ----- СЕКЦИИ (по умолчанию скрыты) ----- */
         .section {
             display: none;
             animation: fadeIn 0.3s ease;
@@ -188,17 +165,16 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ----- ГЛАВНАЯ ----- */
         .hero {
             text-align: center;
-            padding: 40px 20px 30px;
+            padding: 60px 20px 40px;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 48px;
             font-weight: 800;
             color: #fff;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .hero h1 span {
@@ -213,12 +189,6 @@
             line-height: 1.6;
         }
 
-        .hero .btn-primary {
-            padding: 14px 40px;
-            font-size: 18px;
-        }
-
-        /* ----- ПРОДУКТЫ ----- */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -295,7 +265,6 @@
             box-shadow: 0 4px 16px rgba(29, 185, 84, 0.3);
         }
 
-        /* ----- ПРОФИЛЬ ----- */
         .profile-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -408,10 +377,6 @@
             color: #fff;
         }
 
-        .profile-actions .action-btn .arrow {
-            color: #8895a3;
-        }
-
         .download-box {
             background: #1e262e;
             border-radius: 16px;
@@ -426,18 +391,12 @@
             margin-bottom: 14px;
         }
 
-        .download-box .btn-primary {
-            padding: 12px 40px;
-            font-size: 16px;
-        }
-
         .download-box .btn-primary:disabled {
             opacity: 0.4;
             cursor: not-allowed;
             background: #3b4550;
         }
 
-        /* ----- ВХОД / РЕГИСТРАЦИЯ ----- */
         .auth-container {
             max-width: 460px;
             margin: 0 auto;
@@ -528,7 +487,6 @@
             text-decoration: underline;
         }
 
-        /* ----- ОШИБКА (всплывающее сообщение) ----- */
         .error-toast {
             background: #e74c3c;
             color: #fff;
@@ -539,15 +497,10 @@
             align-items: center;
             gap: 12px;
             margin-top: 16px;
-            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
         }
 
         .error-toast.show {
             display: flex;
-        }
-
-        .error-toast i {
-            font-size: 20px;
         }
 
         .success-toast {
@@ -560,14 +513,12 @@
             align-items: center;
             gap: 12px;
             margin-top: 16px;
-            box-shadow: 0 4px 20px rgba(29, 185, 84, 0.3);
         }
 
         .success-toast.show {
             display: flex;
         }
 
-        /* ----- ДОПОЛНЕНИЯ (ключи) ----- */
         .extras-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -633,7 +584,44 @@
             font-size: 15px;
         }
 
-        /* ----- Адаптив ----- */
+        .profile-logged-out {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .profile-logged-out i {
+            font-size: 60px;
+            color: #1db954;
+            margin-bottom: 16px;
+        }
+
+        .profile-logged-out h3 {
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .profile-logged-out p {
+            color: #9aa5b2;
+            margin: 10px 0 20px;
+        }
+
+        .btn-green {
+            background: #1db954;
+            border: none;
+            color: #fff;
+            padding: 12px 40px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-green:hover {
+            background: #17a34a;
+            box-shadow: 0 4px 20px rgba(29, 185, 84, 0.3);
+        }
+
         @media (max-width: 600px) {
             .app {
                 padding: 16px;
@@ -651,20 +639,13 @@
                 font-size: 13px;
             }
         }
-
-        /* Неактивная кнопка */
-        .btn-disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
     </style>
 </head>
 <body>
 
 <div class="app">
 
-    <!-- ===== НАВИГАЦИЯ ===== -->
+    <!-- НАВИГАЦИЯ -->
     <nav class="navbar">
         <div class="logo-area" onclick="showSection('home')">
             <div class="logo-icon">M</div>
@@ -675,7 +656,6 @@
             <a data-section="products" onclick="showSection('products')">Продукты</a>
             <a data-section="profile" onclick="showSection('profile')">Профиль</a>
             <a data-section="extras" onclick="showSection('extras')">Дополнения</a>
-            <a href="#privacy">Политика</a>
         </div>
         <div class="auth-buttons" id="authButtons">
             <button class="btn-outline" onclick="showSection('login')">Вход</button>
@@ -687,38 +667,34 @@
         </div>
     </nav>
 
-    <!-- ===== ГЛАВНАЯ ===== -->
+    <!-- ГЛАВНАЯ -->
     <section id="section-home" class="section active">
         <div class="hero">
             <h1>Открой новые <span>возможности</span></h1>
             <p>MiaWare — твой главный инструмент для достижения вершин. Мы объединили эстетику минимализма с максимальной производительностью, чтобы ничто не отвлекало тебя от победы.</p>
-            <button class="btn-primary" onclick="showSection('products')">Начать побеждать</button>
+            <button class="btn-primary" onclick="showSection('products')" style="padding:14px 40px; font-size:18px;">Начать побеждать</button>
         </div>
     </section>
 
-    <!-- ===== ПРОДУКТЫ ===== -->
+    <!-- ПРОДУКТЫ -->
     <section id="section-products" class="section">
         <h2 style="color:#fff; font-size:28px; margin-bottom:6px;">Продукты</h2>
         <p style="color:#9aa5b2; margin-bottom:18px;">Выбери подписку под себя — от месячного теста до доступа навсегда.</p>
-
         <div class="products-grid">
-            <!-- 30 дней -->
             <div class="product-card">
                 <div class="mini-logo">M</div>
                 <h3>30 дней</h3>
-                <div class="desc">Идеальный старт — проверь обходы в реальном бою.<br />Полный доступ ко всем функциям.</div>
+                <div class="desc">Идеальный старт — проверь обходы в реальном бою. Полный доступ ко всем функциям.</div>
                 <div class="price">300 ₽</div>
                 <button class="btn-buy" onclick="buyProduct('30 дней', 300)">Купить</button>
             </div>
-            <!-- 90 дней -->
             <div class="product-card">
                 <div class="mini-logo">M</div>
                 <h3>90 дней</h3>
-                <div class="desc">Больше времени — больше побед, выгоднее по цене.<br />Приоритетные обновления.</div>
+                <div class="desc">Больше времени — больше побед, выгоднее по цене. Приоритетные обновления.</div>
                 <div class="price">450 ₽</div>
                 <button class="btn-buy" onclick="buyProduct('90 дней', 450)">Купить</button>
             </div>
-            <!-- Навсегда -->
             <div class="product-card">
                 <div class="mini-logo">M</div>
                 <h3>Навсегда</h3>
@@ -726,27 +702,26 @@
                 <div class="price">600 ₽</div>
                 <button class="btn-buy" onclick="buyProduct('Навсегда', 600)">Купить</button>
             </div>
-            <!-- Сброс HWID -->
             <div class="product-card">
                 <div class="mini-logo">M</div>
                 <h3>Сброс HWID</h3>
-                <div class="desc">Отвязка оборудования при смене или переустановке ПК.<br />Мгновенно после оплаты.</div>
+                <div class="desc">Отвязка оборудования при смене или переустановке ПК. Мгновенно после оплаты.</div>
                 <div class="price">250 ₽</div>
                 <button class="btn-buy" onclick="buyProduct('Сброс HWID', 250)">Купить</button>
             </div>
         </div>
     </section>
 
-    <!-- ===== ПРОФИЛЬ ===== -->
+    <!-- ПРОФИЛЬ -->
     <section id="section-profile" class="section">
         <h2 style="color:#fff; font-size:28px; margin-bottom:6px;">Профиль</h2>
         <p style="color:#9aa5b2; margin-bottom:18px;">Личный кабинет</p>
 
-        <div id="profileLoggedOut" style="text-align:center; padding:40px 0;">
-            <div style="font-size:60px; color:#1db954; margin-bottom:16px;"><i class="fas fa-user-circle"></i></div>
-            <h3 style="color:#fff; font-size:22px;">Вы не авторизованы</h3>
-            <p style="color:#9aa5b2; margin:10px 0 20px;">Войдите или зарегистрируйтесь, чтобы увидеть свой профиль</p>
-            <button class="btn-primary" onclick="showSection('login')" style="padding:12px 40px;">Войти</button>
+        <div id="profileLoggedOut" class="profile-logged-out">
+            <i class="fas fa-user-circle"></i>
+            <h3>Вы не авторизованы</h3>
+            <p>Войдите или зарегистрируйтесь, чтобы увидеть свой профиль</p>
+            <button class="btn-green" onclick="showSection('login')">Войти</button>
             <button class="btn-outline" onclick="showSection('register')" style="margin-left:10px; padding:12px 40px;">Регистрация</button>
         </div>
 
@@ -778,7 +753,6 @@
                         <span class="value" id="profileUid">34</span>
                     </div>
                 </div>
-
                 <div class="profile-card">
                     <h3>Действия</h3>
                     <div class="profile-actions">
@@ -791,7 +765,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="download-box">
                 <p>Скачать лаунчер <span style="color:#8895a3; font-size:14px; display:block; margin-top:4px;">Нужна активная подписка</span></p>
                 <button class="btn-primary" id="downloadBtn" disabled>Скачать лаунчер</button>
@@ -799,21 +772,19 @@
         </div>
     </section>
 
-    <!-- ===== ДОПОЛНЕНИЯ (КЛЮЧИ) ===== -->
+    <!-- ДОПОЛНЕНИЯ -->
     <section id="section-extras" class="section">
         <h2 style="color:#fff; font-size:28px; margin-bottom:6px;">Дополнения</h2>
         <p style="color:#9aa5b2; margin-bottom:18px;">Активировка ключа и настройки безопасности аккаунта.</p>
-
         <div class="extras-grid">
             <div class="extras-card">
                 <h3>Активировать ключ</h3>
                 <div class="sub">Введите ключ, чтобы продлить доступ.</div>
                 <input type="text" id="keyInput" placeholder="MIAWARE-XXX-XXX" />
-                <div class="key-hint" id="keyHint">Формат: MIAWARE-XXX-XXX</div>
+                <div class="key-hint">Формат: MIAWARE-XXX-XXX</div>
                 <button class="btn-primary" onclick="activateKey()">Активировать</button>
                 <div id="keyResult" style="margin-top:12px; font-weight:600;"></div>
             </div>
-
             <div class="extras-card">
                 <h3>Сменить пароль</h3>
                 <div class="sub">Новый пароль для входа в аккаунт.</div>
@@ -825,7 +796,7 @@
         </div>
     </section>
 
-    <!-- ===== ВХОД ===== -->
+    <!-- ВХОД -->
     <section id="section-login" class="section">
         <div class="auth-container">
             <h2>Добро пожаловать</h2>
@@ -847,7 +818,7 @@
         </div>
     </section>
 
-    <!-- ===== РЕГИСТРАЦИЯ ===== -->
+    <!-- РЕГИСТРАЦИЯ -->
     <section id="section-register" class="section">
         <div class="auth-container">
             <h2>Создайте аккаунт</h2>
@@ -884,14 +855,7 @@
 </div>
 
 <script>
-    // ============================================================
-    // 1. СОСТОЯНИЕ ПОЛЬЗОВАТЕЛЯ
-    // ============================================================
-    let currentUser = null; // { username, email, password, subscription, regDate, uid }
-
-    // ============================================================
-    // 2. ГЕНЕРАЦИЯ 1500 КЛЮЧЕЙ
-    // ============================================================
+    // ГЕНЕРАЦИЯ КЛЮЧЕЙ
     function generateKeys() {
         const keys = [];
         const types = [
@@ -899,73 +863,77 @@
             { label: '3 месяца', count: 500, prefix: 'Q' },
             { label: '1 месяц', count: 500, prefix: 'M' }
         ];
-
         types.forEach(type => {
             for (let i = 0; i < type.count; i++) {
                 const rand = Math.random().toString(36).substring(2, 8).toUpperCase();
-                keys.push({
-                    code: `MIAWARE-${type.prefix}${rand}`,
-                    duration: type.label
-                });
+                keys.push({ code: `MIAWARE-${type.prefix}${rand}`, duration: type.label });
             }
         });
-
         return keys;
     }
-
     const keyDatabase = generateKeys();
 
-    // ============================================================
-    // 3. ПОКАЗ СЕКЦИЙ + ОБНОВЛЕНИЕ НАВИГАЦИИ
-    // ============================================================
+    let currentUser = null;
+
     function showSection(section) {
-        // Скрыть все секции
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-        // Показать нужную
         const target = document.getElementById('section-' + section);
         if (target) target.classList.add('active');
-
-        // Активная ссылка в навигации
         document.querySelectorAll('.nav-links a[data-section]').forEach(a => {
             a.classList.toggle('active', a.dataset.section === section);
         });
-
-        // Если открыли профиль — обновить отображение
         if (section === 'profile') updateProfileUI();
-
-        // Скрыть ошибки при смене вкладок
-        document.querySelectorAll('.error-toast, .success-toast').forEach(el => {
-            el.classList.remove('show');
-        });
+        document.querySelectorAll('.error-toast, .success-toast').forEach(el => el.classList.remove('show'));
     }
 
-    // ============================================================
-    // 4. ВХОД / ВЫХОД / РЕГИСТРАЦИЯ
-    // ============================================================
+    function updateUIAfterLogin() {
+        document.getElementById('authButtons').style.display = 'none';
+        document.getElementById('userBadge').style.display = 'flex';
+        document.getElementById('userNameDisplay').textContent = currentUser.username;
+        updateProfileUI();
+        document.querySelectorAll('.error-toast, .success-toast').forEach(el => el.classList.remove('show'));
+    }
+
+    function updateProfileUI() {
+        if (currentUser) {
+            document.getElementById('profileLoggedOut').style.display = 'none';
+            document.getElementById('profileLoggedIn').style.display = 'block';
+            document.getElementById('profileUsername').textContent = currentUser.username;
+            document.getElementById('profileEmail').textContent = currentUser.email || 'user@email.com';
+            document.getElementById('profileRegDate').textContent = currentUser.regDate || '25.06.2026';
+            document.getElementById('profileUid').textContent = currentUser.uid || '34';
+            const sub = currentUser.subscription || 'Нету подписки';
+            const subEl = document.getElementById('profileSubscription');
+            subEl.textContent = sub;
+            subEl.className = 'value ' + (sub === 'Нету подписки' ? 'inactive' : 'active');
+            const accessEl = document.getElementById('profileAccess');
+            const hasSub = sub !== 'Нету подписки';
+            accessEl.textContent = hasSub ? 'Активен' : 'Неактивен';
+            accessEl.className = 'value ' + (hasSub ? 'active' : 'inactive');
+            document.getElementById('downloadBtn').disabled = !hasSub;
+        } else {
+            document.getElementById('profileLoggedOut').style.display = 'block';
+            document.getElementById('profileLoggedIn').style.display = 'none';
+        }
+    }
+
     function loginUser(e) {
         e.preventDefault();
         const username = document.getElementById('loginUsername').value.trim();
         const password = document.getElementById('loginPassword').value.trim();
-
-        const errorBox = document.getElementById('loginError');
-        const errorText = document.getElementById('loginErrorText');
-
-        // Проверка: есть ли такой пользователь в localStorage
         const stored = localStorage.getItem('miaware_user');
         if (stored) {
             const user = JSON.parse(stored);
             if (user.username === username && user.password === password) {
                 currentUser = user;
                 updateUIAfterLogin();
-                errorBox.classList.remove('show');
+                document.getElementById('loginError').classList.remove('show');
                 showSection('profile');
                 return false;
             }
         }
-
-        // Если нет — ошибка
-        errorText.textContent = 'Неверный логин или пароль. Попробуйте снова.';
-        errorBox.classList.add('show');
+        document.getElementById('loginErrorText').textContent = 'Неверный логин или пароль.';
+        document.getElementById('loginError').classList.add('show');
         return false;
     }
 
@@ -977,10 +945,34 @@
         const passwordRepeat = document.getElementById('regPasswordRepeat').value.trim();
         const isClient = document.getElementById('regClient').checked;
 
-        const errorBox = document.getElementById('regError');
-        const errorText = document.getElementById('regErrorText');
-        const successBox = document.getElementById('regSuccess');
-
-        // Валидация
         if (!username || !email || !password || !passwordRepeat) {
-            errorText.text
+            document.getElementById('regErrorText').textContent = 'Заполните все поля.';
+            document.getElementById('regError').classList.add('show');
+            return false;
+        }
+        if (password !== passwordRepeat) {
+            document.getElementById('regErrorText').textContent = 'Пароли не совпадают.';
+            document.getElementById('regError').classList.add('show');
+            return false;
+        }
+        if (!isClient) {
+            document.getElementById('regErrorText').textContent = 'Подтвердите, что вы клиент.';
+            document.getElementById('regError').classList.add('show');
+            return false;
+        }
+        const stored = localStorage.getItem('miaware_user');
+        if (stored) {
+            const existing = JSON.parse(stored);
+            if (existing.username === username) {
+                document.getElementById('regErrorText').textContent = 'Пользователь с таким логином уже существует.';
+                document.getElementById('regError').classList.add('show');
+                return false;
+            }
+        }
+        const newUser = {
+            username: username,
+            email: email,
+            password: password,
+            subscription: 'Нету подписки',
+            regDate: new Date().toLocaleDateString('ru-RU'),
+            uid
